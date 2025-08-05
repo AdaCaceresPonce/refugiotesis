@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" 
+     xmlns:xlink="http://www.w3.org/1999/xlink" 
+     style="display: none;">
+
+  <!-- Facebook -->
+  <symbol id="icon-facebook" viewBox="0 0 320 512">
+    <path d="M279.14 288l14.22-92.66h-88.91V127.09..." />
+  </symbol>
+
+  <!-- Instagram -->
+  <symbol id="icon-instagram" viewBox="0 0 448 512">
+    <path d="M224,202.66A53.34,53.34,0,1,0,277.34,256..." />
+  </symbol>
+
+  <!-- YouTube -->
+  <symbol id="icon-youtube" viewBox="0 0 576 512">
+    <path d="M549.65 124.08c-6.28-23.65-24.84-42.21..." />
+  </symbol>
+
+  <!-- TikTok -->
+  <symbol id="icon-tiktok" viewBox="0 0 448 512">
+    <path d="M448,209.9V145.4c-23.2,0-45.3-7.7-63.2..." />
+  </symbol>
+
+</svg>
