@@ -27,7 +27,7 @@
         <div style="background-color: #091D63;">
             <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row items-center justify-between px-4 py-3 text-sm space-y-4 md:space-y-0">
                 <div class="flex items-center justify-center md:justify-start gap-4">
-                    <img src="{{ asset('img/fondo_huellita_azul.png') }}" alt="Logo Patitas" class="h-20">
+                    <img src="{{ asset('img/section_one/fondo_huellita_azul.png') }}" alt="Logo Patitas" class="h-20">
                 </div>
                 <div class="flex flex-col md:flex-row items-center justify-center gap-2 text-white text-center md:text-left">
                     <p>refugiopatitasdelsurchincha@gmail.com</p>
@@ -48,7 +48,7 @@
             <div class="max-w-screen-xl mx-auto px-4 py-3 flex justify-between items-center">
                 <!-- Logo  -->
                 <div class="flex items-center gap-3 text-white font-bold text-lg">
-                    <img src="{{ asset('img/nombre-patita-sur.jpg') }}" alt="RPS" class="h-8">
+                    <img src="{{ asset('img/section_one/nombre-patita-sur.jpg') }}" alt="RPS" class="h-8">
                 </div>
                 <!-- Botón hamburguesa móvil -->
                 <div class="md:hidden">
@@ -96,7 +96,7 @@
         <section class="flex flex-col md:flex-row items-center justify-center gap-10 px-6 py-10 ">
             <!-- Imagen circular -->
             <div class="w-96 h-96 rounded-full overflow-hidden border-4 border-cyan-400 shadow-md">
-                <img src="{{ asset('img/portada_refugio.jpg') }}" alt="Refugio Patitas" class="w-full h-full object-cover">
+                <img src="{{ asset('img/section_one/portada_refugio.jpg') }}" alt="Refugio Patitas" class="w-full h-full object-cover">
             </div>
 
             <!-- Texto y botón -->
@@ -117,37 +117,31 @@
         </section>
         {{-- segundo item --}}
         <section class="max-w-7xl mx-auto px-6 py-12 text-center">
-            <h2 class="text-3xl font-bold mb-12">Nuestra Misión</h2>
-
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-                <!-- Item 1 -->
-                <div class="flex flex-col items-center p-6 bg-white rounded-xl shadow-md">
-                    <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Rescate" class="w-16 mb-4">
-                    <h3 class="text-lg font-semibold mb-2">Rescate y Protección</h3>
-                    <p class="text-gray-600 text-sm">Brindar refugio seguro a animales en peligro, protegiéndolos de daños adicionales.</p>
+                <!-- Card 1 ejemplo -->
+                <div class="bg-white rounded-xl p-6 shadow-md text-center transform transition duration-300 hover:scale-105 hover:shadow-lg hover:ring-2 hover:ring-cyan-400">
+                  <img src="img/section_two/rescate_proteccion.jpg" alt="Rescate" class="w-16 mx-auto mb-4">
+                  <h3 class="text-lg font-semibold mb-2">Rescate y Protección</h3>
+                  <p class="text-gray-600 text-sm">Brindar refugio seguro a animales en peligro, protegiéndolos de daños adicionales.</p>
                 </div>
-
-                <!-- Item 2 -->
-                <div class="flex flex-col items-center p-6 bg-white rounded-xl shadow-md">
-                    <img src="https://cdn-icons-png.flaticon.com/512/2921/2921222.png" alt="Cuidado" class="w-16 mb-4">
-                    <h3 class="text-lg font-semibold mb-2">Cuidado y rehabilitación</h3>
+                <!-- Card 2 ejemplo -->
+                <div class="bg-white rounded-xl p-6 shadow-md text-center transform transition duration-300 hover:scale-105 hover:shadow-lg hover:ring-2 hover:ring-cyan-400">
+                    <img src="img/section_two/cuidado_rehabilitacion.jpg" alt="Rescate" class="w-16 mx-auto mb-4">
+                    <h3 class="text-lg font-semibold mb-2">Cuidado y Rehabilitación</h3>
                     <p class="text-gray-600 text-sm">Proporcionar atención veterinaria y emocional para mejorar su bienestar.</p>
                 </div>
-
-                <!-- Item 3 -->
-                <div class="flex flex-col items-center p-6 bg-white rounded-xl shadow-md">
-                    <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Adopción" class="w-16 mb-4">
-                    <h3 class="text-lg font-semibold mb-2">Promoción de la adopción</h3>
+                <!-- Card 3 ejemplo -->
+                <div class="bg-white rounded-xl p-6 shadow-md text-center transform transition duration-300 hover:scale-105 hover:shadow-lg hover:ring-2 hover:ring-cyan-400">
+                    <img src="img/section_two/promociones.jpg" alt="Rescate" class="w-16 mx-auto mb-4">
+                    <h3 class="text-lg font-semibold mb-2">Promoción de la Adopción</h3>
                     <p class="text-gray-600 text-sm">Facilitar adopciones responsables para encontrarles hogares permanentes.</p>
                 </div>
-
-                <!-- Item 4 -->
-                <div class="flex flex-col items-center p-6 bg-white rounded-xl shadow-md">
-                    <img src="https://cdn-icons-png.flaticon.com/512/2947/2947995.png" alt="Educación" class="w-16 mb-4">
-                    <h3 class="text-lg font-semibold mb-2">Educación y concienciación</h3>
+                <!-- Card 4 ejemplo -->
+                <div class="bg-white rounded-xl p-6 shadow-md text-center transform transition duration-300 hover:scale-105 hover:shadow-lg hover:ring-2 hover:ring-cyan-400">
+                    <img src="img/section_two/educacion.jpg" alt="Rescate" class="w-16 mx-auto mb-4">
+                    <h3 class="text-lg font-semibold mb-2">Educación y Concienciación</h3>
                     <p class="text-gray-600 text-sm">Promover la conciencia sobre el bienestar animal y la responsabilidad de ser dueños de mascotas.</p>
                 </div>
-            </div>
         </section>
 
         <!-- Texto Superior -->
@@ -158,12 +152,10 @@
                 </p>
                 <em class="block text-white mt-2 text-sm sm:text-base">"Los que hablan solo con una mirada"</em>
             </section>
-        
-
             <!-- Banner Principal con Imagen -->
             <section class="relative max-w-4xl mx-auto mt-4 rounded-xl overflow-hidden shadow-lg ">
                 <!-- Imagen de fondo -->
-                <img src="img/unete.png" alt="Banner" class="w-full h-64 object-cover">
+                <img src="img/section_three/unete.png" alt="Banner" class="w-full h-64 object-cover">
             </section>
         </section>
 
@@ -177,7 +169,7 @@
                     </a>
             </div>
             <!-- Imagen -->
-            <img src="img/atencion-animales.jpg" alt="Mascota" class="w-40 md:w-48 rounded-lg">
+            <img src="img/section_three/atencion-animales.jpg" alt="Mascota" class="w-40 md:w-48 rounded-lg">
         </section>
 
             <section class="bg-gradient-to-b from-white to-cyan-100 text-center py-12 px-4">
@@ -187,25 +179,25 @@
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto mb-10">
                 <!-- Firulais V -->
                 <div>
-                    <img src="img/perrito_mirada.jpg" alt="Firulais V" class="w-40 h-40 object-cover rounded-md mx-auto mb-2" />
+                    <img src="img/section_four/perrito_mirada.jpg" alt="Firulais V" class="w-40 h-40 object-cover rounded-md mx-auto mb-2" />
                     <p class="font-medium">Firulais V</p>
                 </div>
 
                 <!-- Loreta -->
                 <div>
-                    <img src="img/loreta.jpg" alt="Loreta" class="w-40 h-40 object-cover rounded-md mx-auto mb-2" />
+                    <img src="img/section_four/loreta.jpg" alt="Loreta" class="w-40 h-40 object-cover rounded-md mx-auto mb-2" />
                     <p class="font-medium">Loreta</p>
                 </div>
 
                 <!-- Emma -->
                 <div>
-                    <img src="img/emma.jpg" alt="Emma" class="w-40 h-40 object-cover rounded-md mx-auto mb-2" />
+                    <img src="img/section_four/emma.jpg" alt="Emma" class="w-40 h-40 object-cover rounded-md mx-auto mb-2" />
                     <p class="font-medium">Emma</p>
                 </div>
 
                 <!-- Pablo -->
                 <div>
-                    <img src="img/pablo.jpg" alt="Pablo" class="w-40 h-40 object-cover rounded-md mx-auto mb-2"/>
+                    <img src="img/section_four/pablo.jpg" alt="Pablo" class="w-40 h-40 object-cover rounded-md mx-auto mb-2"/>
                     <p class="font-medium">Pablo</p>
                 </div>
                 </div>
@@ -231,7 +223,7 @@
                     </div>
                     <!-- Imagen -->
                     <div class="flex justify-center">
-                        <img src="img/help_refugio.jpg" alt="Ayúdanos a ayudar" class="rounded-xl shadow-lg max-w-full" />
+                        <img src="img/section_five/help_refugio.jpg" alt="Ayúdanos a ayudar" class="rounded-xl shadow-lg max-w-full" />
                     </div>
                 </div>
             </section>
@@ -243,7 +235,7 @@
               
                 <!-- Logo y descripción -->
                     <div class="flex flex-col items-center md:items-start">
-                        <img src="img/nombre-patita-sur-fondo-azul.png" alt="Logo" class="w-60 mb-4">
+                        <img src="img/section_six/nombre-patita-sur-fondo-azul.png" alt="Logo" class="w-60 mb-4">
                         <p class="text-sm leading-6 mb-4">
                         Este proyecto nace con la esperanza de poder ayudar a nuestros hermanos pequeños de la calle, 
                         dándoles una SEGUNDA OPORTUNIDAD DE VIVIR Y DE CONOCER EL AMOR.
@@ -291,14 +283,14 @@
                     <div class="flex flex-col items-center md:items-start">
                         <h3 class="text-lg font-semibold mb-4">Nuestros Adoptados</h3>
                         <div class="grid grid-cols-4 gap-2 justify-center">
-                        <img src="img/loreta.jpg" class="w-20 h-20 object-cover rounded">
-                        <img src="img/loreta.jpg" class="w-20 h-20 object-cover rounded">
-                        <img src="img/loreta.jpg" class="w-20 h-20 object-cover rounded">
-                        <img src="img/loreta.jpg" class="w-20 h-20 object-cover rounded">
-                        <img src="img/loreta.jpg" class="w-20 h-20 object-cover rounded">
-                        <img src="img/loreta.jpg" class="w-20 h-20 object-cover rounded">
-                        <img src="img/loreta.jpg" class="w-20 h-20 object-cover rounded">
-                        <img src="img/loreta.jpg" class="w-20 h-20 object-cover rounded">
+                        <img src="img/section_six/loreta.jpg" class="w-20 h-20 object-cover rounded">
+                        <img src="img/section_six/loreta.jpg" class="w-20 h-20 object-cover rounded">
+                        <img src="img/section_six/loreta.jpg" class="w-20 h-20 object-cover rounded">
+                        <img src="img/section_six/loreta.jpg" class="w-20 h-20 object-cover rounded">
+                        <img src="img/section_six/loreta.jpg" class="w-20 h-20 object-cover rounded">
+                        <img src="img/section_six/loreta.jpg" class="w-20 h-20 object-cover rounded">
+                        <img src="img/section_six/loreta.jpg" class="w-20 h-20 object-cover rounded">
+                        <img src="img/section_six/loreta.jpg" class="w-20 h-20 object-cover rounded">
                         </div>
                     </div>
                 </div>
