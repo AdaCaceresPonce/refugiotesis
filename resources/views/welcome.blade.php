@@ -76,8 +76,8 @@
                 </div>
             </div>
                 <!-- Menú móvil oculto por defecto -->
-            <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-4">
-                <ul class="space-y-2 text-white font-medium text-sm">
+            <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-4 ">
+                <ul class="space-y-2 text-white font-medium  text-sm">
                     <li><a href="" class="block">Inicio</a></li>
                     <li><a href="" class="block">Nosotros</a></li>
                     <li><a href="" class="block">Adopción</a></li>
@@ -102,8 +102,8 @@
             <!-- Texto y botón -->
             <div class="max-w-md text-center md:text-left">
                 <p class="text-cyan-500 font-semibold uppercase text-sm mb-1">Te damos la bienvenida al</p>
-                <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-4">
-                Refugio Patitas del Sur <br class="hidden md:block" /> (Chincha)
+                <h2 class="text-2xl md:text-3xl font-extrabold mb-4 text-center md:text-left animate-color-change">
+                    Refugio Patitas del Sur <br class="hidden md:block" /> (Chincha)
                 </h2>
                 <p class="text-gray-600 mb-6 leading-relaxed">
                 Este proyecto nace con la esperanza de poder ayudar a nuestros hermanos pequeños de la calle, dándoles una
@@ -332,3 +332,15 @@
     mobileMenu.classList.toggle('hidden');
   });
 </script>
+<style>
+    /* COLOCACION DEL TEXTO REFUGIO CHINCHA EN CAMBIO AUTOMATICO DE COLOR  */
+    @keyframes colorChange {
+      0%   { color: #0b0224; }   /* blue-900 */
+      50%  { color: #e92f0e; }   /* cyan-500 */
+      100% { color: #1e3a8a; }
+    }
+    .animate-color-change {
+      animation: colorChange 3s ease-in-out infinite;
+    }
+  </style>
+  
