@@ -172,41 +172,65 @@
             <img src="img/section_three/atencion-animales.jpg" alt="Mascota" class="w-40 md:w-48 rounded-lg">
         </section>
 
-            <section class="bg-gradient-to-b from-white to-cyan-100 text-center py-12 px-4">
-                <p class="text-sm text-cyan-600 font-semibold uppercase">Ellos esperan por ti</p>
-                <h1 class="text-2xl font-bold mt-2 mb-8">No compres uno de raza, mejor adopta uno sin casa.</h1>
-
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto mb-10">
-                <!-- Firulais V -->
-                <div>
-                    <img src="img/section_four/perrito_mirada.jpg" alt="Firulais V" class="w-40 h-40 object-cover rounded-md mx-auto mb-2" />
-                    <p class="font-medium">Firulais V</p>
+        <section class="bg-gradient-to-b from-white to-cyan-100 text-center py-12 px-4">
+            <p class="text-sm text-cyan-600 font-semibold uppercase">Ellos esperan por ti</p>
+            <h1 class="text-2xl font-bold mt-2 mb-8">No compres uno de raza, mejor adopta uno sin casa.</h1>
+          
+                <!-- Carrusel contenedor -->
+                <div class="overflow-hidden max-w-6xl mx-auto">
+                <div id="carouselTrack" class="flex transition-transform duration-700 ease-in-out">
+                    
+                    <!-- Grupo 1 -->
+                    <div class="grid grid-cols-2 md:flex w-full flex-shrink-0 justify-center gap-6 place-items-center">
+                    <div class="w-40 flex flex-col items-center">
+                        <img src="img/section_four/perrito_mirada.jpg" class="w-40 h-40 object-cover rounded-xl shadow-md" />
+                        <p class="mt-2 font-medium">Firulais V</p>
+                    </div>
+                    <div class="w-40 flex flex-col items-center">
+                        <img src="img/section_four/loreta.jpg" class="w-40 h-40 object-cover rounded-xl shadow-md" />
+                        <p class="mt-2 font-medium">Loreta</p>
+                    </div>
+                    <div class="w-40 flex flex-col items-center">
+                        <img src="img/section_four/emma.jpg" class="w-40 h-40 object-cover rounded-xl shadow-md" />
+                        <p class="mt-2 font-medium">Emma</p>
+                    </div>
+                    <div class="w-40 flex flex-col items-center">
+                        <img src="img/section_four/pablo.jpg" class="w-40 h-40 object-cover rounded-xl shadow-md" />
+                        <p class="mt-2 font-medium">Pablo</p>
+                    </div>
+                    </div>
+            
+                    <!-- Grupo 2 -->
+                    <div class="grid grid-cols-2 md:flex w-full flex-shrink-0 justify-center gap-6 place-items-center">
+                    <div class="w-40 flex flex-col items-center">
+                        <img src="img/section_four/perrito_mirada.jpg" class="w-40 h-40 object-cover rounded-xl shadow-md" />
+                        <p class="mt-2 font-medium">Firulais V</p>
+                    </div>
+                    <div class="w-40 flex flex-col items-center">
+                        <img src="img/section_four/loreta.jpg" class="w-40 h-40 object-cover rounded-xl shadow-md" />
+                        <p class="mt-2 font-medium">Loreta</p>
+                    </div>
+                    <div class="w-40 flex flex-col items-center">
+                        <img src="img/section_four/emma.jpg" class="w-40 h-40 object-cover rounded-xl shadow-md" />
+                        <p class="mt-2 font-medium">Emma</p>
+                    </div>
+                    <div class="w-40 flex flex-col items-center">
+                        <img src="img/section_four/pablo.jpg" class="w-40 h-40 object-cover rounded-xl shadow-md" />
+                        <p class="mt-2 font-medium">Pablo</p>
+                    </div>
+                    </div>
+          
                 </div>
-
-                <!-- Loreta -->
-                <div>
-                    <img src="img/section_four/loreta.jpg" alt="Loreta" class="w-40 h-40 object-cover rounded-md mx-auto mb-2" />
-                    <p class="font-medium">Loreta</p>
-                </div>
-
-                <!-- Emma -->
-                <div>
-                    <img src="img/section_four/emma.jpg" alt="Emma" class="w-40 h-40 object-cover rounded-md mx-auto mb-2" />
-                    <p class="font-medium">Emma</p>
-                </div>
-
-                <!-- Pablo -->
-                <div>
-                    <img src="img/section_four/pablo.jpg" alt="Pablo" class="w-40 h-40 object-cover rounded-md mx-auto mb-2"/>
-                    <p class="font-medium">Pablo</p>
-                </div>
-                </div>
-
-                <button class="bg-cyan-500 text-white px-6 py-2 rounded-full hover:bg-cyan-600 transition">
-                Conoce a más →
-                </button>
-            </section>
-            <section class="py-16 px-4 max-w-7xl mx-auto">
+            </div>
+          
+            <button class="mt-8 bg-cyan-500 text-white px-6 py-2 rounded-full hover:bg-cyan-600 transition">
+              Conoce a más →
+            </button>
+        </section>
+          
+          
+          
+        <section class="py-16 px-4 max-w-7xl mx-auto">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
                     <!-- Texto -->
                     <div>
@@ -226,7 +250,7 @@
                         <img src="img/section_five/help_refugio.jpg" alt="Ayúdanos a ayudar" class="rounded-xl shadow-lg max-w-full" />
                     </div>
                 </div>
-            </section>
+        </section>
     
         <!-- Footer -->
         <footer style="background-color: #091D63;">
@@ -323,16 +347,16 @@
   toggleBtn.addEventListener('click', () => {
     mobileMenu.classList.toggle('hidden');
   });
+
+//   carrusel
+  const track = document.getElementById('carouselTrack');
+  let index = 0;
+  const totalSlides = 2;
+
+  setInterval(() => {
+    index = (index + 1) % totalSlides;
+    track.style.transform = `translateX(-${index * 100}%)`;
+  }, 4000); // cambia cada 4 segundos
 </script>
-<style>
-    /* COLOCACION DEL TEXTO REFUGIO CHINCHA EN CAMBIO AUTOMATICO DE COLOR  */
-    @keyframes colorChange {
-      0%   { color: #0b0224; }   /* blue-900 */
-      50%  { color: #e92f0e; }   /* cyan-500 */
-      100% { color: #1e3a8a; }
-    }
-    .animate-color-change {
-      animation: colorChange 3s ease-in-out infinite;
-    }
-  </style>
-  
+
+   
