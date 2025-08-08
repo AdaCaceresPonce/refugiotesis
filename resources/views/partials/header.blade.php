@@ -38,8 +38,8 @@
             <div class="hidden md:flex md:items-center md:gap-6 ml-10 w-full justify-between">
                 <!-- Enlaces -->
                 <ul class="flex gap-4 text-white font-medium text-sm">
-                    <li><a href="" class="pb-1 transition {{ request()->path() == 'inicio' ? 'border-b-2 border-white' : 'hover:border-b-2 hover:border-white' }}">Inicio</a></li>
-                    <li><a href="" class="pb-1 transition {{ request()->is('nosotros') ? 'border-b-2 border-white' : 'hover:border-b-2 hover:border-white' }}">Nosotros</a></li>
+                    <li><a href="{{ url('/') }}" class="pb-1 transition {{ request()->path() == 'inicio' ? 'border-b-2 border-white' : 'hover:border-b-2 hover:border-white' }}">Inicio</a></li>
+                    <li><a href="{{ url('/us') }}" class="pb-1 transition {{ request()->is('nosotros') ? 'border-b-2 border-white' : 'hover:border-b-2 hover:border-white' }}">Nosotros</a></li>
                     <li><a href="" class="pb-1 transition {{ request()->is('adopcion') ? 'border-b-2 border-white' : 'hover:border-b-2 hover:border-white' }}">Adopción</a></li>
                     <li><a href="" class="pb-1 transition {{ request()->is('voluntariado') ? 'border-b-2 border-white' : 'hover:border-b-2 hover:border-white' }}">Voluntariado</a></li>
                     <li><a href="" class="pb-1 transition {{ request()->is('actividades') ? 'border-b-2 border-white' : 'hover:border-b-2 hover:border-white' }}">Actividades</a></li>
@@ -56,8 +56,8 @@
             <!-- Menú móvil oculto por defecto -->
         <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-4 ">
             <ul class="space-y-2 text-white font-medium  text-sm">
-                <li><a href="" class="block">Inicio</a></li>
-                <li><a href="" class="block">Nosotros</a></li>
+                <li><a href="{{ url('/') }}" class="block">Inicio</a></li>
+                <li><a href="{{ url('/us') }}" class="block">Nosotros</a></li>
                 <li><a href="" class="block">Adopción</a></li>
                 <li><a href="" class="block">Voluntariado</a></li>
                 <li><a href="" class="block">Actividades</a></li>
@@ -70,3 +70,24 @@
         </div>
     </nav>
 </header>
+<!-- Script para menú móvil -->
+<script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    toggleBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    //   carrusel
+    const track = document.getElementById('carouselTrack');
+    let index = 0;
+    const totalSlides = 2;
+
+    setInterval(() => {
+        index = (index + 1) % totalSlides;
+        track.style.transform = `translateX(-${index * 100}%)`;
+    }, 4000); // cambia cada 4 segundos
+    
+
+</script>

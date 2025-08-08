@@ -72,7 +72,7 @@
     <div class="mt-8 border-t border-blue-700 pt-4 text-sm text-white">
         <div class="max-w-screen-xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
             <!-- Texto -->
-            <p class="text-center md:text-left">© 2020 Landify UI Kit. All rights reserved</p>
+            <p class="text-center md:text-left">© 2025 Caceres & Huaman. All rights reserved</p>
         
             <!-- Enlaces -->
             <div class="flex flex-wrap justify-center md:justify-end gap-4 px-2 py-2">

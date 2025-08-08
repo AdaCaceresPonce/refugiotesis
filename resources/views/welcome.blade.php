@@ -16,14 +16,16 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <!-- Alpine.js  -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 
 <body class="font-sans">
 
     @include('partials.header')
 
-        <section class="flex flex-col md:flex-row items-center justify-center gap-10 px-6 py-10 ">
-            <!-- Imagen circular -->
+       
+            {{-- <!-- Imagen circular -->
             <div class="w-96 h-96 rounded-full overflow-hidden border-4 border-cyan-400 shadow-md">
                 <img src="{{ asset('img/section_one/portada_refugio.jpg') }}" alt="Refugio Patitas" class="w-full h-full object-cover">
             </div>
@@ -42,36 +44,10 @@
                 Conoce más
                 <i class="fa-solid fa-arrow-right ml-2"></i>
                 </a>
-            </div>
-        </section>
-        {{-- segundo item --}}
-        <section class="max-w-7xl mx-auto px-6 py-12 text-center">
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-                <!-- Card 1 ejemplo -->
-                <div class="bg-white rounded-xl p-6 shadow-md text-center transform transition duration-300 hover:scale-105 hover:shadow-lg hover:ring-2 hover:ring-cyan-400">
-                  <img src="img/section_two/rescate_proteccion.jpg" alt="Rescate" class="w-16 mx-auto mb-4">
-                  <h3 class="text-lg font-semibold mb-2">Rescate y Protección</h3>
-                  <p class="text-gray-600 text-sm">Brindar refugio seguro a animales en peligro, protegiéndolos de daños adicionales.</p>
-                </div>
-                <!-- Card 2 ejemplo -->
-                <div class="bg-white rounded-xl p-6 shadow-md text-center transform transition duration-300 hover:scale-105 hover:shadow-lg hover:ring-2 hover:ring-cyan-400">
-                    <img src="img/section_two/cuidado_rehabilitacion.jpg" alt="Rescate" class="w-16 mx-auto mb-4">
-                    <h3 class="text-lg font-semibold mb-2">Cuidado y Rehabilitación</h3>
-                    <p class="text-gray-600 text-sm">Proporcionar atención veterinaria y emocional para mejorar su bienestar.</p>
-                </div>
-                <!-- Card 3 ejemplo -->
-                <div class="bg-white rounded-xl p-6 shadow-md text-center transform transition duration-300 hover:scale-105 hover:shadow-lg hover:ring-2 hover:ring-cyan-400">
-                    <img src="img/section_two/promociones.jpg" alt="Rescate" class="w-16 mx-auto mb-4">
-                    <h3 class="text-lg font-semibold mb-2">Promoción de la Adopción</h3>
-                    <p class="text-gray-600 text-sm">Facilitar adopciones responsables para encontrarles hogares permanentes.</p>
-                </div>
-                <!-- Card 4 ejemplo -->
-                <div class="bg-white rounded-xl p-6 shadow-md text-center transform transition duration-300 hover:scale-105 hover:shadow-lg hover:ring-2 hover:ring-cyan-400">
-                    <img src="img/section_two/educacion.jpg" alt="Rescate" class="w-16 mx-auto mb-4">
-                    <h3 class="text-lg font-semibold mb-2">Educación y Concienciación</h3>
-                    <p class="text-gray-600 text-sm">Promover la conciencia sobre el bienestar animal y la responsabilidad de ser dueños de mascotas.</p>
-                </div>
-        </section>
+            </div> --}}
+        @include('mision.portada')
+       
+        @include('mision.mision')
 
         <!-- Texto Superior -->
         <section style="background: linear-gradient(180deg, #30D1F5 0%, #30D1F5 40%, #ffffff 100%);">
@@ -179,39 +155,19 @@
     @include('partials.footer')  
 </body>
 </html>
-<!-- Script para menú móvil -->
-<script>
-  const toggleBtn = document.getElementById('menu-toggle');
-  const mobileMenu = document.getElementById('mobile-menu');
 
-  toggleBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-  });
-
-//   carrusel
-  const track = document.getElementById('carouselTrack');
-  let index = 0;
-  const totalSlides = 2;
-
-  setInterval(() => {
-    index = (index + 1) % totalSlides;
-    track.style.transform = `translateX(-${index * 100}%)`;
-  }, 4000); // cambia cada 4 segundos
-  
-
-</script>
 <style>
-/* cambiar de color */
-    @keyframes colorChange {
-        0%   { color: #d42f06; }  
-        25%  { color: #220349; }  
-        50%  { color: #166906; }  
-        75%  { color: #32164d; }  
-        100% { color: #045c6b; }
-    }
+    /* cambiar de color */
+        @keyframes colorChange {
+            0%   { color: #d42f06; }  
+            25%  { color: #220349; }  
+            50%  { color: #166906; }  
+            75%  { color: #32164d; }  
+            100% { color: #045c6b; }
+        }
 
-    .animate-color-change {
-        animation: colorChange 5s linear infinite;
-    }
+        .animate-color-change {
+            animation: colorChange 5s linear infinite;
+        }
 </style>
    
