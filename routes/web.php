@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\AnimalController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -8,4 +8,17 @@ Route::get('/', function () {
 
 Route::get('/us', function () {
     return view('us');
+});
+
+
+// Route::get('/adoption', [AnimalController::class, 'index'])->name('adoption');
+// Route::get('/adoption', function () {
+//     return view('adoption');
+// });
+Route::get('/adoption', function () {
+    $animales = [
+        ['id' => 1, 'nombre' => 'Max', 'tipo' => 'Perro'],
+        ['id' => 2, 'nombre' => 'Mia', 'tipo' => 'Gato'],
+    ];
+    return view('adoption', compact('animales'));
 });

@@ -40,7 +40,7 @@
                 <ul class="flex gap-4 text-white font-medium text-sm">
                     <li><a href="{{ url('/') }}" class="pb-1 hover:border-b-2 border-white">Inicio</a></li>
                     <li><a href="{{ url('/us') }}" class="pb-1 hover:border-b-2 border-white">Nosotros</a></li>
-                    <li><a href="#" class="pb-1 hover:border-b-2 border-white">Adopción</a></li>
+                    <li><a href="{{ url('/adoption') }}" class="pb-1 hover:border-b-2 border-white">Adopción</a></li>
 
                     <!-- Dropdown Comunidad -->
                     <li class="relative group">
