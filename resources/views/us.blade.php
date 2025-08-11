@@ -42,11 +42,11 @@
     <section class="bg-gray-100 py-16 px-6 md:px-20">
         <!-- Encabezado -->
         <div class="text-center mb-10">
-            <h2 class="text-4xl font-bold text-cyan-900">¿Quiénes somos?</h2>
+            <h2 class="text-4xl font-bold text-cyan-900">Nuestra Historia</h2>
         </div>
     
         <!-- Contenido principal -->
-        <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+        <div class="flex flex-col md:flex-row items-center justify-center gap-12">
             <!-- Imagen/ilustración izquierda -->
             <div class="flex-shrink-0 w-60 h-60">
                 <img src="{{ asset('img/us/perrito_cartelito_us_sinfondo.jpg') }}" alt="Perrito Logo" class="w-full h-full object-contain">
@@ -93,7 +93,7 @@
       
           <!-- Texto a la derecha -->
           <div class="w-full md:w-1/2 max-w-xl">
-            <h2 class="text-3xl font-extrabold text-gray-900 mb-4">Nuestra Historia</h2>
+            <h2 class="text-3xl font-extrabold text-gray-900 mb-4">Mision</h2>
             <p class="text-gray-700 text-justify leading-relaxed text-base">
               Refugio Patitas del Sur se fundó con la misión de rescatar, proteger y brindar una segunda oportunidad a los animales en situación de abandono. 
               <br><br>
@@ -110,8 +110,8 @@
       
     
        
-     {{-- Mision --}}
-     @include('mision.mision')
+    {{-- Mision --}}
+    @include('mision.mision')
     <!-- Main -->
     <main class="flex-grow">
         @yield('content')
