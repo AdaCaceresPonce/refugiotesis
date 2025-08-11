@@ -16,100 +16,158 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <!-- Alpine.js  -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 
 <body class="font-sans">
 
-    <!-- Encabezado completo -->
-    <header class="text-white">
+    @include('partials.header')
 
-        <!-- Barra superior -->
-        <div style="background-color: #091D63;">
-            <div class="max-w-screen-xl mx-auto flex items-center justify-between px-10 py-4 text-sm">
-                <div class="flex items-center gap-16">
-                    <img src="{{ asset('img/fondo_huellita_azul.png') }}" alt="Logo Patitas" class="h-20">
-                </div>
-                <div class="flex justify-end items-center gap-4 text-white text-sm h-16 px-4">
-                    <p>refugiopatitasdelsurchincha@gmail.com</p>
-                    <span>|</span>
-                    <p>999-693-963</p>
-                </div>
-                <div class="flex items-center gap-4 text-white">
-                    <a href="#" class="bg-white/10 rounded-full p-2 hover:bg-white/20 transition">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                    <a href="#" class="bg-white/10 rounded-full p-2 hover:bg-white/20 transition">
-                        <i class="fa-brands fa-tiktok"></i>
-                    </a>
-                    <a href="#" class="bg-white/10 rounded-full p-2 hover:bg-white/20 transition">
-                        <i class="fa-brands fa-twitter"></i>
-                    </a>
-                    <a href="#" class="bg-white/10 rounded-full p-2 hover:bg-white/20 transition">
-                        <i class="fa-brands fa-youtube"></i>
-                    </a>
-                </div>
+       
+            {{-- <!-- Imagen circular -->
+            <div class="w-96 h-96 rounded-full overflow-hidden border-4 border-cyan-400 shadow-md">
+                <img src="{{ asset('img/section_one/portada_refugio.jpg') }}" alt="Refugio Patitas" class="w-full h-full object-cover">
             </div>
-        </div>
 
-        <!-- Menú principal -->
-        <nav style="background-color:#2690FC;">
-            <div class="max-w-screen-xl mx-auto flex items-center justify-between px-4 py-3">
-                <!-- Logo y nombre -->
-                <div class="flex items-center gap-3 text-white font-bold text-lg">
-                    <img src="{{ asset('img/nombre-patita-sur.jpg') }}" alt="RPS" class="h-8">
+            <!-- Texto y botón -->
+            <div class="max-w-md text-center md:text-left">
+                <p class="text-cyan-500 font-semibold uppercase text-sm mb-1">Te damos la bienvenida al</p>
+                <h2 class="text-2xl md:text-3xl font-extrabold mb-4 text-center md:text-left animate-color-change">
+                    Refugio Patitas del Sur <br class="hidden md:block" /> (Chincha)
+                </h2>
+                <p class="text-gray-600 mb-6 leading-relaxed">
+                Este proyecto nace con la esperanza de poder ayudar a nuestros hermanos pequeños de la calle, dándoles una
+                <span class="font-bold">segunda oportunidad de vivir y de conocer el amor.</span>
+                </p>
+                <a href="#" class="inline-flex items-center bg-cyan-500 text-white px-5 py-2 rounded-md font-semibold hover:bg-cyan-600 transition">
+                Conoce más
+                <i class="fa-solid fa-arrow-right ml-2"></i>
+                </a>
+            </div> --}}
+        @include('mision.portada')
+       
+        @include('mision.mision')
+
+        <!-- Texto Superior -->
+        <section style="background: linear-gradient(180deg, #30D1F5 0%, #30D1F5 40%, #ffffff 100%);">
+            <section class="max-w-2xl mx-auto text-center text-white font-bold text-base sm:text-lg md:text-xl p-4 sm:p-6 ">
+                <p>
+                    Necesitamos del apoyo incondicional tuyo o de los que deseen sumarse a este sueño en la Provincia de Chincha y sigamos con esta labor en favor de ellos.
+                </p>
+                <em class="block text-white mt-2 text-sm sm:text-base">"Los que hablan solo con una mirada"</em>
+            </section>
+            <!-- Banner Principal con Imagen -->
+            <section class="relative max-w-4xl mx-auto mt-4 rounded-xl overflow-hidden shadow-lg ">
+                <!-- Imagen de fondo -->
+                <img src="img/section_three/unete.png" alt="Banner" class="w-full h-64 object-cover">
+            </section>
+        </section>
+
+        <!-- Sección Voluntariado -->
+        <section class="flex flex-col-reverse md:flex-row items-center justify-center text-center md:text-left mt-8 max-w-4xl mx-auto gap-6 p-4 mb-8">
+            <!-- Texto y botón -->
+            <div class="flex flex-col items-center md:items-start">
+                <h3 class="text-xl font-bold mb-4">¿Estás interesado? <br class="hidden md:block">Postula para el voluntariado</h3>
+                    <a href="#" class="inline-block bg-black text-white font-semibold px-6 py-3 rounded-lg hover:bg-gray-800 transition">
+                        Más información
+                    </a>
+            </div>
+            <!-- Imagen -->
+            <img src="img/section_three/atencion-animales.jpg" alt="Mascota" class="w-40 md:w-48 rounded-lg">
+        </section>
+
+        <section class="bg-gradient-to-b from-white to-cyan-100 text-center py-12 px-4">
+            <p class="text-sm text-cyan-600 font-semibold uppercase">Ellos esperan por ti</p>
+            <h1 class="text-2xl font-bold mt-2 mb-8">No compres uno de raza, mejor adopta uno sin casa.</h1>
+          
+                <!-- Carrusel contenedor -->
+                <div class="overflow-hidden max-w-6xl mx-auto">
+                <div id="carouselTrack" class="flex transition-transform duration-700 ease-in-out">
                     
-                </div>
-
-                <!-- Enlaces del menú -->
-                <ul class="flex items-center gap-4 text-white font-medium text-sm">
-                    <li>
-                        <a href="" 
-                        class="pb-1 transition {{ request()->path() == 'inicio'  ? 'border-b-2 border-white' : 'hover:border-b-2 hover:border-white' }}">
-                        Inicio
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" 
-                        class="pb-1 transition {{ request()->is('nosotros') ? 'border-b-2 border-white' : 'hover:border-b-2 hover:border-white' }}">
-                        Nosotros
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" 
-                        class="pb-1 transition {{ request()->is('adopcion') ? 'border-b-2 border-white' : 'hover:border-b-2 hover:border-white' }}">
-                        Adopción
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" 
-                        class="pb-1 transition {{ request()->is('voluntariado') ? 'border-b-2 border-white' : 'hover:border-b-2 hover:border-white' }}">
-                        Voluntariado
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" 
-                        class="pb-1 transition {{ request()->is('actividades') ? 'border-b-2 border-white' : 'hover:border-b-2 hover:border-white' }}">
-                        Actividades
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" 
-                        class="pb-1 transition {{ request()->is('contacto') ? 'border-b-2 border-white' : 'hover:border-b-2 hover:border-white' }}">
-                        Contacto
-                        </a>
-                    </li>
-                </ul>
-
-
-                <!-- Botones de sesión -->
-                <div class="flex gap-3">
-                    <a href="#" class="bg-white text-blue-700 px-5 py-1 rounded-md text-sm hover:bg-blue-100 font-bold">Inicia Sesión</a>
-                    <a href="#" class="bg-blue-800 text-white px-5 py-1 rounded-md text-sm hover:bg-blue-900 font-bold">Regístrate</a>
+                    <!-- Grupo 1 -->
+                    <div class="grid grid-cols-2 md:flex w-full flex-shrink-0 justify-center gap-6 place-items-center">
+                    <div class="w-40 flex flex-col items-center">
+                        <img src="img/section_four/perrito_mirada.jpg" class="w-40 h-40 object-cover rounded-xl shadow-md" />
+                        <p class="mt-2 font-medium">Firulais V</p>
+                    </div>
+                    <div class="w-40 flex flex-col items-center">
+                        <img src="img/section_four/loreta.jpg" class="w-40 h-40 object-cover rounded-xl shadow-md" />
+                        <p class="mt-2 font-medium">Loreta</p>
+                    </div>
+                    <div class="w-40 flex flex-col items-center">
+                        <img src="img/section_four/emma.jpg" class="w-40 h-40 object-cover rounded-xl shadow-md" />
+                        <p class="mt-2 font-medium">Emma</p>
+                    </div>
+                    <div class="w-40 flex flex-col items-center">
+                        <img src="img/section_four/pablo.jpg" class="w-40 h-40 object-cover rounded-xl shadow-md" />
+                        <p class="mt-2 font-medium">Pablo</p>
+                    </div>
+                    </div>
+            
+                    <!-- Grupo 2 -->
+                    <div class="grid grid-cols-2 md:flex w-full flex-shrink-0 justify-center gap-6 place-items-center">
+                    <div class="w-40 flex flex-col items-center">
+                        <img src="img/section_four/perrito_mirada.jpg" class="w-40 h-40 object-cover rounded-xl shadow-md" />
+                        <p class="mt-2 font-medium">Firulais V</p>
+                    </div>
+                    <div class="w-40 flex flex-col items-center">
+                        <img src="img/section_four/loreta.jpg" class="w-40 h-40 object-cover rounded-xl shadow-md" />
+                        <p class="mt-2 font-medium">Loreta</p>
+                    </div>
+                    <div class="w-40 flex flex-col items-center">
+                        <img src="img/section_four/emma.jpg" class="w-40 h-40 object-cover rounded-xl shadow-md" />
+                        <p class="mt-2 font-medium">Emma</p>
+                    </div>
+                    <div class="w-40 flex flex-col items-center">
+                        <img src="img/section_four/pablo.jpg" class="w-40 h-40 object-cover rounded-xl shadow-md" />
+                        <p class="mt-2 font-medium">Pablo</p>
+                    </div>
+                    </div>
                 </div>
             </div>
-        </nav>
-
-    </header>
-
+            <button class="mt-8 bg-cyan-500 text-white px-6 py-2 rounded-full hover:bg-cyan-600 transition">
+            Conoce a más →
+            </button>
+        </section>
+        <section class="py-16 px-4 max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                    <!-- Texto -->
+                    <div>
+                        <h2 class="text-3xl font-extrabold text-gray-900 mb-4">Con tu ayuda podemos más</h2>
+                        <p class="text-gray-700 mb-6">
+                        Necesitamos del apoyo incondicional tuyo o de los que deseen sumarse a este sueño en la Provincia de Chincha y sigamos con esta labor en favor de ellos.
+                        </p>
+                        <a href="#" class="text-purple-600 font-semibold hover:underline inline-flex items-center">
+                        CONOCE MÁS
+                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                        </svg>
+                        </a>
+                    </div>
+                    <!-- Imagen -->
+                    <div class="flex justify-center">
+                        <img src="img/section_five/help_refugio.jpg" alt="Ayúdanos a ayudar" class="rounded-xl shadow-lg max-w-full" />
+                    </div>
+                </div>
+        </section>
+    
+    @include('partials.footer')  
 </body>
 </html>
+
+<style>
+    /* cambiar de color */
+        @keyframes colorChange {
+            0%   { color: #d42f06; }  
+            25%  { color: #220349; }  
+            50%  { color: #166906; }  
+            75%  { color: #32164d; }  
+            100% { color: #045c6b; }
+        }
+
+        .animate-color-change {
+            animation: colorChange 5s linear infinite;
+        }
+</style>
+   
