@@ -1,4 +1,5 @@
 <?php
+use App\Http\Controllers\ActividadController;
 use App\Http\Controllers\AnimalController;
 use Illuminate\Support\Facades\Route;
 
@@ -9,6 +10,19 @@ Route::get('/', function () {
 Route::get('/us', function () {
     return view('us');
 });
+
+Route::get('/activities', function () {
+    return view('activities');
+});
+// MAL: devuelve la vista sin datos
+// Route::get('/actividades', function () {
+//     return view('actividades.index');
+// });
+
+Route::get('/actividades', [ActividadController::class, 'index'])->name('actividades.index');
+Route::get('/actividades/crear', [ActividadController::class, 'create'])->name('actividades.create');
+Route::post('/actividades', [ActividadController::class, 'store'])->name('actividades.store');
+Route::get('/actividades/{actividad}', [ActividadController::class, 'show'])->name('actividades.show');
 
 
 // Route::get('/adoption', [AnimalController::class, 'index'])->name('adoption');
