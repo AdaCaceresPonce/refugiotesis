@@ -8,14 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Actividad extends Model
 {
     use HasFactory;
-
+     // 👇 Indica la tabla correcta
+    protected $table = 'actividades';
     protected $fillable = [
         'titulo',
         'descripcion',
         'imagen',
         'fecha',
-        'comentarios_count',
-        'likes_count',
     ];
 
     protected $dates = ['fecha'];

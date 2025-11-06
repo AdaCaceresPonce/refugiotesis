@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Actividad;
 
 class ActividadController extends Controller
 {
@@ -10,7 +11,7 @@ class ActividadController extends Controller
     {
         // $actividades = Actividad::orderBy('fecha', 'asc')->paginate(6);
         // return view('actividades.index', compact('actividades'));
-        $actividades = \App\Models\Actividad::orderBy('fecha', 'asc')->paginate(6);
+        $actividades = Actividad::orderBy('fecha', 'asc')->paginate(6);
         return view('actividades.index', compact('actividades'));
     }
 

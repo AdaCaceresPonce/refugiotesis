@@ -1,3 +1,6 @@
+
+
+
 <!-- Contenedor general con imagen de fondo -->
 <section class="relative bg-[url('/img/section_six/fondo_footer.jpg')] bg-cover bg-center bg-fixed">
     <!-- Footer con fondo azul translúcido -->
@@ -84,3 +87,5 @@
         </div>
     </div>
 </footer>
+<!-- 👇 Script del cursor gatita -->
+<script src="{{ asset('js/cursor-gatita.js') }}"></script>

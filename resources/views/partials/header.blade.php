@@ -18,7 +18,7 @@
                 <a href="#" class="bg-white/10 rounded-full p-2 hover:bg-white/20 transition"><i class="fa-brands fa-youtube"></i></a>
             </div>
         </div>
-    </div>
+    </div> 
 
     <!-- Menú principal -->
     <nav style="background-color:#2690FC;">
@@ -48,7 +48,7 @@
                             Comunidad <span class="transition-transform" id="arrow-comunidad">▼</span>
                         </button>
                         <ul class="absolute hidden group-hover:block bg-white text-black shadow-md p-2 rounded-md z-50">
-                            <li><a href="{{ url('/activities') }}" class="block px-4 py-2 hover:bg-gray-100">Actividades</a></li>
+                            <li><a href="{{ url('/actividades') }}" class="block px-4 py-2 hover:bg-gray-100">Actividades</a></li>
                             <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Se Busca</a></li>
                             <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Testimonios</a></li>
                         </ul>

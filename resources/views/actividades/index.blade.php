@@ -27,7 +27,7 @@
     {{-- Header --}}
     @include('partials.header')
      <!-- Banner de sección -->
-     <section class="relative h-64 w-full bg-cover bg-center"
+     {{-- <section class="relative h-64 w-full bg-cover bg-center"
      style="background-image: url('{{ asset('img/adoption/banner_2_adopciones_2.jpg') }}');">
     <div class="absolute inset-0 bg-black/40"></div>
 
@@ -106,8 +106,31 @@
                 </div>
             @endforeach
         </div>
-    </section>
+    </section> --}}
+    @section('content')
+        <h1 class="text-2xl font-bold mb-4">Listado de Actividades</h1>
 
+        @if(session('success'))
+            <div class="bg-green-500 text-white p-2 rounded mb-4">
+                {{ session('success') }}
+            </div>
+        @endif
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            @foreach($actividades as $actividad)
+                <div class="p-4 border rounded bg-white shadow">
+                    <h2 class="text-xl font-semibold">{{ $actividad->titulo }}</h2>
+                    <p>{{ $actividad->descripcion }}</p>
+                    <p class="text-sm text-gray-500">📅 {{ $actividad->fecha }}</p>
+                    <a href="{{ route('actividades.show', $actividad) }}" class="text-blue-500">Ver más</a>
+                </div>
+            @endforeach
+        </div>
+
+        <div class="mt-4">
+            {{ $actividades->links() }}
+        </div>
+    @endsection
 
     {{-- Footer --}}
     @include('partials.footer')

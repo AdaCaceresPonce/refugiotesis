@@ -17,8 +17,6 @@ return new class extends Migration
             $table->text('descripcion');
             $table->string('imagen')->nullable();
             $table->date('fecha')->nullable();
-            $table->unsignedInteger('comentarios_count')->default(0);
-            $table->unsignedInteger('likes_count')->default(0);
             $table->timestamps();
         });
     }
